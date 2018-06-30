@@ -18,7 +18,7 @@ def all():
     donations = Donation.select()
     return render_template('donations.jinja2', donations=donations)
 
-@app.route('/newdonation', methods=["GET", "POST"])
+@app.route('/donation', methods=["GET", "POST"])
 def new_donation():
     if request.method == "POST":
         try:
